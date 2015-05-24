@@ -2,7 +2,7 @@
 ELECTRON SCATTERING PROBLEM IN STATIC FIELD 
 ============================================================
  -------------------------------------------  ------.------
- AMPLITUDE                              [au]      -0.0005
+ AMPLITUDE                              [au]      -0.1
  SCATTERING ENERGY                      [au]       0.3
  -
  -
@@ -39,9 +39,9 @@ POTENTIAL
 CALCULATION
 ============================================================
  -------------------------------------------  ------.------
- INNER REGION SIZE                      [au]      55.
+ INNER REGION SIZE                      [au]       6.
  MAXIMUM OF ANGULAR MOMANTUM L           [1]      40 
- GRID NUMBER OF r COORDINATES            [1]     100
+ GRID NUMBER OF r COORDINATES            [1]      50 
  GRID NUMBER OF 3D PLOT                  [1]     200 
  -
  -
