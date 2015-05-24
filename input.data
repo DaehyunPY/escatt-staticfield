@@ -2,7 +2,7 @@
 LASER FIELD
 ============================================================
  -------------------------------------------  ------.------
- AMPLITUDE                              [au]       0.0000
+ AMPLITUDE                              [au]       0.00004
  -
  -
 ============================================================
@@ -51,9 +51,9 @@ POTENTIAL
 CALCULATION
 ============================================================
  -------------------------------------------  ------.------
- BOUNDARY SIZE                          [au]      20.
- MAXIUM OF ANGULAR MOMANTUM L            [1]      50 
- GRID NUMBER OF r COORDINATES            [1]      50  
+ BOUNDARY SIZE                          [au]     200.
+ MAXIUM OF ANGULAR MOMANTUM L            [1]      80  
+ GRID NUMBER OF r COORDINATES            [1]     150  
  FLOQUET NUMBER                          [1]      30
  GRID NUMBER OF Energy COORDINATES       [1]    1000
  3D PLOT NUMBER OF r COORDINATES         [1]     200 
@@ -66,11 +66,11 @@ OPTION
  -------------------------------------------  ------.------
  [UNIT]
  COUTION: Default unit system is a.u. 
-    USE ENERGY UNIT eV                 [Y/N]       YES    
+    USE ENERGY UNIT eV                 [Y/N]       YES  
     USE ANGULAR UNIT degree            [Y/N]       YES 
-    USE CROSS SECTION UNIT A^2         [Y/N]       NO  
+    USE CROSS SECTION UNIT A^2         [Y/N]       NO 
  [OUTPUT 1] GENERAL 
-    BASIS FUNCTION                     [Y/N]       NO  
+    BASIS FUNCTION                     [Y/N]       NO 
     BOUND STATES ENERGY & FUNCTION     [Y/N]       NO 
  [OUTPUT 2] POTENTIAL SCATTERING 
     DIFFERCIAL CROSS SECTION           [Y/N]       YES  

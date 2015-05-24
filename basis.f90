@@ -37,8 +37,9 @@ end function mat_angular
 function mat_dipole(i)  
     use hamiltonian, only: coord_r
     integer(i4), intent(in) :: i
-    real   (dp) :: mat_dipole, tmp 
-    tmp         = Amp*coord_r(i)
+    real   (dp) :: mat_dipole, tmp, alpha = 1.d-3
+!     tmp         = Amp*coord_r(i)
+    tmp         = Amp*coord_r(i)*(1.d0 -exp(alpha*(coord_r(i) -Bound)))
 !     mat_dipole = tmp*Charge 
     mat_dipole = tmp
 end function mat_dipole
@@ -177,8 +178,7 @@ end subroutine diag
 ! ==================================================
 ! hamiltonian --------------------------------------
 subroutine PROC_H(l) 
-    use hamiltonian, only: coord_r, Poten_r
-    use plot, only: plot_mat  
+    use hamiltonian, only: coord_r, Poten_r 
     character(30), parameter  :: form_out = '(1A15, 10F9.3)'
     integer  (i4), intent(in) :: l 
     real     (dp) :: sign, tmp 
@@ -203,7 +203,6 @@ subroutine PROC_H(l)
 !     call check_mat ! for test 
     call diag
 !     call check_mat ! for test 
-!     call plot_mat(50, mat_H)
 
     H(:, :) = 0.d0
     sign    = 1.d0 
@@ -222,10 +221,12 @@ subroutine PROC_H(l)
     if(allocated(mat_H)) deallocate(mat_H)
     write(file_log, form_out) "Energy: ", (E(i), i = 1, 5) 
 
-!     do j = 1, N 
-!         write(30, *) coord_r(j), Poten_r(coord_r(j))*Charge +Amp*coord_r(i)
-!     end do 
-!     print *, "hello"
+    do j = 1, N 
+        write(30, *) coord_r(j), mat_poten(j) +mat_dipole(j)
+    end do 
+    write(30, *)
+    write(30, *)
+    print *, "hello"
 end subroutine PROC_H
 ! end hamiltonian ----------------------------------
 ! basis plot ---------------------------------------

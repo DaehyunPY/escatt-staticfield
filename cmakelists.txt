@@ -31,7 +31,7 @@ include_directories (/Users/hyuna917/Dropbox/Library/Fortran/include/)
 target_link_libraries (a.out /Users/hyuna917/Dropbox/Library/Fortran/lib/libconst.a) 
 # target_link_libraries (a.out /Users/hyuna917/Dropbox/Library/Fortran/lib/libfft.a) 
 target_link_libraries (a.out /Users/hyuna917/Dropbox/Library/Fortran/lib/liblinear.a) 
-target_link_libraries (a.out /Users/hyuna917/Dropbox/Library/Fortran/lib/libplot.a) 
+# target_link_libraries (a.out /Users/hyuna917/Dropbox/Library/Fortran/lib/libplot.a) 
 # target_link_libraries (a.out /Users/hyuna917/Dropbox/Library/Fortran/lib/libsde.a) 
 
 
